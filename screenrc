@@ -1,0 +1,23 @@
+#termcapinfo xterm|xterms|xs|rxvt ti@:te@
+term screen-256color
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#term xterm
+#defutf8 on
+#defflow off
+escape ^Bb
+# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+bindkey -k F1 prev
+bindkey -k F2 next
+
+#shelltitle "$|bash"
+#startup_message off
+#hardstatus alwayslastline
+#hardstatus alwayslastline '%{= wk} %-w%{+b wk}%50> %n* %t %{= wk}%+w%< %{= wk}%-=%D %m/%d/%y | %C:%s %A | %1`%{-} %2`%{-}'
+caption always "%{= .w}%-w%{= MW}%n %t%{-}%+w %-= %1`"
+#hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%<"
+# Don't block command output if the terminal stops responding
+#nonblock on
+# Allow editors etc. to restore display on exit
+# rather than leaving existing test in place
+#altscreen on
+#attrcolor b ".I"
